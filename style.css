@@ -1,0 +1,125 @@
+@import url("./assest/fonts/css/fontiran.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "iranyekan";
+    list-style: none;
+}
+:root{
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack:#222;
+    --mainGrey:#7c7c7c;
+    --mainTransition: all 0.3s linear;
+    --mainRed:#db2777;
+    --bodyColor:#f6f6f6;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bodyColor);
+    color: var(--mainBlack);
+}
+header{
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.form-container{
+    display: flex;
+}
+.form-container form{
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+.todo-input{
+    flex: 1;
+}
+form .add-btn,
+form .todo-input{
+    outline: none;
+    border: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: .5rem;
+}
+form .add-btn{
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: var(--mainTransition);
+}
+form .add-btn:hover{
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+}
+.todo-container{
+    width: 25rem;
+   
+    
+}
+.todo{
+    transition: var(--mainTransition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .2rem 0;
+    background-color: var(--secondaryColor);
+}
+.todo li{
+ flex: 1;
+ font-weight: bold;
+ color: var(--primaryColor);
+}
+.todo span{
+    display: block;
+    padding: .5rem;
+    cursor: pointer;
+}
+.fa-trash-can{
+    color: var(--mainRed);
+}
+.fa-pen-to-square,.fa-circle-check{
+ color: var(--primaryColor);
+}
+.completed{
+    text-decoration: line-through;
+    opacity: .3;
+}
+
+.select select{
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 1rem;
+    color: var(--primaryColor);
+    background-color: var(--mainWhite);
+    font-weight: bold;
+}
+.select{
+    position: relative;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 9rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    color: var(--primaryColor);
+    pointer-events: none;
+}
