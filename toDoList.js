@@ -114,8 +114,25 @@ function  clearTodos(){
 }
 
 
+todoOption.addEventListener("click", filtersTodo);
 
-
+function filtersTodo(e) {
+  const todos = [... todoList.childNodes];//todolist.children
+  // console.log(todos);
+  todos.forEach((todo) => {
+    if (e.target.value === "all") {
+      todo.style.display = "flex";
+    }
+    else if(e.target.value === "completed"){
+        if(todo.classList.contains("completed")) todo.style.display='flex';
+        else todo.style.display='none';
+    }
+    else{
+        if(todo.classList.contains("completed")) todo.style.display='none';
+        else todo.style.display='flex';
+    }
+  });
+}
 
 
 
