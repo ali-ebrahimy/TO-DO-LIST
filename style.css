@@ -34,18 +34,38 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    width: 30rem;
 }
+
 .form-container{
     display: flex;
+    width: 100%;
+}
+@media screen and (max-width:685px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 22rem;
+    }
+    .form-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .select{
+        /* margin-bottom: 1rem; */
+        /* width: 200px; */
+    }
 }
 .form-container form{
-    width: 25rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 1rem;
 }
 .todo-input{
-    flex: 1;
+    width: 100%;
 }
 form .add-btn,
 form .todo-input{
@@ -53,7 +73,7 @@ form .todo-input{
     border: none;
     background-color: var(--mainWhite);
     font-size: 1rem;
-    padding: .5rem;
+    padding: 1rem;
 }
 form .add-btn{
     color: var(--primaryColor);
@@ -65,9 +85,8 @@ form .add-btn:hover{
     color: var(--mainWhite);
 }
 .todo-container{
-    width: 25rem;
-   
-    
+    width: 100%;
+    padding: 1rem;
 }
 .todo{
     transition: var(--mainTransition);
@@ -76,6 +95,7 @@ form .add-btn:hover{
     align-items: center;
     margin: .2rem 0;
     background-color: var(--secondaryColor);
+    padding: .5rem;
 }
 .todo li{
  flex: 1;
@@ -107,17 +127,19 @@ form .add-btn:hover{
     color: var(--primaryColor);
     background-color: var(--mainWhite);
     font-weight: bold;
+    height: 100%;
+    cursor: pointer;
 }
 .select{
     position: relative;
-    margin-left: 1rem;
-    cursor: pointer;
-    width: 9rem;
+    /* margin-left: 1rem; */
+    width: auto;
+    padding: 1rem;
 }
 .select::after{
     content: "\25BC";
     position: absolute;
-    padding: 1rem;
+    padding: 2rem;
     top: 0;
     right: 0;
     color: var(--primaryColor);
