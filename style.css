@@ -55,7 +55,11 @@ header{
     }
     .select{
         /* margin-bottom: 1rem; */
-        /* width: 200px; */
+        width: 20px;
+    }
+    .select select{
+        border: 1px solid var(--primaryColor);
+        border-radius: 10px;
     }
 }
 .form-container form{
@@ -133,7 +137,7 @@ form .add-btn:hover{
 .select{
     position: relative;
     /* margin-left: 1rem; */
-    width: auto;
+    width: 16rem;
     padding: 1rem;
 }
 .select::after{
